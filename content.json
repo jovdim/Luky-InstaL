@@ -2,6 +2,7 @@
   "site_name": "Luky InstaL",
   "site_url": "https://lukyinstal.sk",
   "schema_version": "1.0",
+  "logo_image": "logo.png",
   "sections": [
     {
       "type": "navigation",
@@ -10,13 +11,12 @@
       "order": 1,
       "fields": {
         "logo_text": "Luky InstaL",
+        "logo_image": "logo.png",
         "links": [
-          { "id": "nav_link_1", "label": "Domov", "url": "#hero_1" },
-          { "id": "nav_link_2", "label": "O nás", "url": "#about_1" },
-          { "id": "nav_link_3", "label": "Služby", "url": "#services_1" },
-          { "id": "nav_link_4", "label": "Galéria", "url": "#gallery_1" },
-          { "id": "nav_link_5", "label": "Referencie", "url": "#testimonials_1" },
-          { "id": "nav_link_6", "label": "Kontakt", "url": "#contact_1" }
+          { "id": "nav_link_1", "label": "Úvod", "url": "#hero_1" },
+          { "id": "nav_link_2", "label": "Služby", "url": "#services_1" },
+          { "id": "nav_link_3", "label": "Realizácie", "url": "#gallery_1" },
+          { "id": "nav_link_4", "label": "Kontakt", "url": "#contact_1" }
         ]
       }
     },
@@ -26,22 +26,18 @@
       "label": "Hero Banner",
       "order": 2,
       "fields": {
-        "headline": "Váš spoľahlivý partner pre vodu, kúrenie a plyn",
-        "subheadline": "Profesionálne inštalatérske služby v Sabinove a okolí s viac ako 10-ročnými skúsenosťami. Od drobnej opravy po kompletné projekty na kľúč.",
-        "cta_text": "Zavolajte nám",
+        "hero_badge": "PROFESIONÁLNE INŠTALATÉRSKE SLUŽBY",
+        "headline": "LUKY INSTAL",
+        "subheadline": "V OBLASTI VODY, KÚRENIA A PLYNU",
+        "cta_text": "0908 420 409",
         "cta_url": "tel:+421908420409",
         "cta_secondary_text": "Naše služby",
         "cta_secondary_url": "#services_1",
-        "background_image": "https://images.pexels.com/photos/6419128/pexels-photo-6419128.jpeg?auto=compress&cs=tinysrgb&w=1400",
-        "hero_images": [
-          "https://images.pexels.com/photos/6419128/pexels-photo-6419128.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://images.pexels.com/photos/6585598/pexels-photo-6585598.jpeg?auto=compress&cs=tinysrgb&w=600",
-          "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=600"
-        ],
+        "background_image": "hero_bg.jpg",
         "trust_badges": [
-          { "value": "10+", "label": "Rokov praxe" },
-          { "value": "500+", "label": "Projektov" },
-          { "value": "24/7", "label": "Pohotovosť" }
+          { "value": "100%", "label": "Kvalita" },
+          { "value": "Top", "label": "Skúsený tím" },
+          { "value": "SPO", "label": "Spoľahlivosť" }
         ]
       }
     },
@@ -51,90 +47,53 @@
       "label": "O nás",
       "order": 3,
       "fields": {
-        "headline": "Prečo práve Luky InstaL?",
-        "text": "Sme tím skúsených inštalatérov so sídlom v Brezovici, ktorí sa špecializujú na kompletné vodoinštalácie, kúrenie a plynové rozvody. Každý projekt pristupujeme s rovnakou dávkou precíznosti a zodpovednosti.",
-        "text_secondary": "Veríme, že kvalitná práca hovorí sama za seba. Preto používame iba overené materiály, dodržiavame dohodnuté termíny a ku každému zákazníkovi pristupujeme individuálne.",
-        "image": "https://images.pexels.com/photos/6419128/pexels-photo-6419128.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "image_secondary": "https://images.pexels.com/photos/6585598/pexels-photo-6585598.jpeg?auto=compress&cs=tinysrgb&w=400",
+        "headline": "Prečo si vybrať Luky InstaL?",
+        "text": "Luky InstaL je renomovaná spoločnosť, ktorá sa špecializuje na poskytovanie profesionálnych inštalatérskych služieb v oblasti vody, kúrenia a plynu. S dlhoročným skúseným tímom odborníkov a vášnivým prístupom k zákazníkom si Luky InstaL získal povesť spoľahlivej a kvalitnej spoločnosti.",
+        "text_secondary": "Kladieme veľký dôraz na kvalitu materiálov a práce, aby sme zabezpečili dlhodobú spoľahlivosť a efektívnosť našich inštalácií. Poskytujeme individuálny prístup a vždy sme pripravení riešiť vaše potreby.",
+        "image": "img2.jpg",
+        "image_secondary": "img3.jpg",
         "highlights": [
-          { "id": "hl_1", "icon": "shield", "text": "Certifikovaní odborníci" },
-          { "id": "hl_2", "icon": "clock", "text": "Dodržiavame termíny" },
-          { "id": "hl_3", "icon": "check-circle", "text": "Záruka na prácu" }
+          { "id": "hl_1", "icon": "shield", "text": "Skúsený tím" },
+          { "id": "hl_2", "icon": "clock", "text": "Spoľahlivosť" },
+          { "id": "hl_3", "icon": "check-circle", "text": "Kvalitné materiály" }
         ]
       }
     },
-    {
-      "type": "stats",
-      "id": "stats_1",
-      "label": "Štatistiky",
-      "order": 4,
-      "fields": {
-        "headline": "Čísla, ktoré hovoria za nás",
-        "items": [
-          { "id": "stat_1", "value": "10", "suffix": "+", "label": "Rokov skúseností", "icon": "award", "description": "Na trhu od roku 2014" },
-          { "id": "stat_2", "value": "500", "suffix": "+", "label": "Spokojných zákazníkov", "icon": "users", "description": "Domácnosti aj firmy" },
-          { "id": "stat_3", "value": "1200", "suffix": "+", "label": "Dokončených projektov", "icon": "check-circle", "description": "Od opráv po novostavby" },
-          { "id": "stat_4", "value": "100", "suffix": "%", "label": "Spokojnosť klientov", "icon": "star", "description": "Bez reklamácií" }
-        ]
-      }
-    },
+
     {
       "type": "services_grid",
       "id": "services_1",
       "label": "Naše služby",
       "order": 5,
       "fields": {
-        "headline": "Komplexné inštalatérske služby",
-        "subheadline": "Od drobných opráv po veľké projekty na kľúč",
+        "headline": "Naše služby",
+        "subheadline": "Prehľad služieb v oblasti inštalácií",
         "items": [
           {
             "id": "svc_1",
             "title": "Vodoinštalácie",
-            "description": "Kompletné vodovodné systémy — rozvody teplej a studenej vody, výmena potrubí, montáž armatúr a batérií.",
+            "description": "Luky InstaL poskytuje komplexné služby v oblasti inštalácii vodovodných systémov. Od drobných opráv až po kompletné inštalácie nového vodovodného systému.",
             "icon": "droplet",
-            "image": "https://images.pexels.com/photos/6419128/pexels-photo-6419128.jpeg?auto=compress&cs=tinysrgb&w=600"
+            "image": "img1.jpg"
           },
           {
             "id": "svc_2",
-            "title": "Kúrenie a plyn",
-            "description": "Inštalácia a údržba vykurovacích systémov, kotlov a plynových rozvodov. Podlahové kúrenie, radiátory a tepelné čerpadlá.",
+            "title": "Kúrenie",
+            "description": "S našimi odborníkmi na kúrenie sme schopní riešiť vaše všetky potreby súvisiace s inštaláciou, údržbou a opravami kúrenia. Vylepšenie alebo nový systém.",
             "icon": "flame",
-            "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=600"
+            "image": "img2.jpg"
           },
           {
             "id": "svc_3",
-            "title": "Kanalizácia a odpad",
-            "description": "Kompletné rozvody kanalizácie, čistenie odpadových potrubí, opravy a výmeny systémov pre domy aj byty.",
-            "icon": "tool",
-            "image": "https://images.pexels.com/photos/5691635/pexels-photo-5691635.jpeg?auto=compress&cs=tinysrgb&w=600"
-          },
-          {
-            "id": "svc_4",
-            "title": "Kúpeľne na kľúč",
-            "description": "Kompletná rekonštrukcia kúpeľní vrátane obkladov, dlažby, sanity, vane a sprchovacieho kúta.",
-            "icon": "home",
-            "image": "https://images.pexels.com/photos/6585598/pexels-photo-6585598.jpeg?auto=compress&cs=tinysrgb&w=600"
+            "title": "Plynové inštalácie",
+            "description": "Spoločnosť sa tiež špecializuje na plynové inštalácie, vrátane plynových potrubí, kotlov a ďalších prvkov plynových systémov podľa bezpečnostných štandardov.",
+            "icon": "settings",
+            "image": "img3.jpg"
           }
         ]
       }
     },
-    {
-      "type": "features",
-      "id": "features_1",
-      "label": "Prečo si vybrať nás",
-      "order": 6,
-      "fields": {
-        "headline": "Stavíme na kvalite a dôvere",
-        "subheadline": "Každý projekt je pre nás osobný záväzok",
-        "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "items": [
-          { "id": "feat_1", "title": "Skúsený tím", "description": "Naši inštalatéri majú rozsiahle skúsenosti a certifikácie pre prácu s vodou, plynom aj kúrením.", "icon": "users" },
-          { "id": "feat_2", "title": "Spoľahlivosť", "description": "Dodržiavame dohodnuté termíny a cenové ponuky. Bez skrytých poplatkov.", "icon": "shield" },
-          { "id": "feat_3", "title": "Kvalitné materiály", "description": "Pracujeme iba s overenými materiálmi od renomovaných výrobcov.", "icon": "check-circle" },
-          { "id": "feat_4", "title": "Rýchly zásah", "description": "V prípade havárie sme pripravení zasiahnuť v čo najkratšom čase.", "icon": "phone" }
-        ]
-      }
-    },
+
     {
       "type": "gallery",
       "id": "gallery_1",
@@ -144,48 +103,15 @@
         "headline": "Naše realizácie",
         "subheadline": "Ukážky z reálnych projektov, na ktoré sme hrdí",
         "items": [
-          { "id": "gal_1", "image": "https://images.pexels.com/photos/6419128/pexels-photo-6419128.jpeg?auto=compress&cs=tinysrgb&w=800", "caption": "Rozvody vody - novostavba" },
-          { "id": "gal_2", "image": "https://images.pexels.com/photos/6585598/pexels-photo-6585598.jpeg?auto=compress&cs=tinysrgb&w=800", "caption": "Moderná kúpeľňa na kľúč" },
-          { "id": "gal_3", "image": "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=800", "caption": "Rekonštrukcia kúpeľne" },
-          { "id": "gal_4", "image": "https://images.pexels.com/photos/6585764/pexels-photo-6585764.jpeg?auto=compress&cs=tinysrgb&w=800", "caption": "Kanalizačné rozvody" },
-          { "id": "gal_5", "image": "https://images.pexels.com/photos/5691635/pexels-photo-5691635.jpeg?auto=compress&cs=tinysrgb&w=800", "caption": "Plynová prípojka" },
-          { "id": "gal_6", "image": "https://images.pexels.com/photos/5691537/pexels-photo-5691537.jpeg?auto=compress&cs=tinysrgb&w=800", "caption": "Podlahové kúrenie" }
+          { "id": "gal_1", "image": "img1.jpg", "caption": "Podlahové kúrenie" },
+          { "id": "gal_2", "image": "img2.jpg", "caption": "Kompletáž kúrenia" },
+          { "id": "gal_3", "image": "img3.jpg", "caption": "Inštalácia kotla" },
+          { "id": "gal_4", "image": "img4.jpg", "caption": "Potrubné rozvody" },
+          { "id": "gal_5", "image": "img5.jpg", "caption": "Technické rozvody" }
         ]
       }
     },
-    {
-      "type": "testimonials",
-      "id": "testimonials_1",
-      "label": "Referencie",
-      "order": 8,
-      "fields": {
-        "headline": "Čo hovoria naši zákazníci",
-        "subheadline": "Skúsenosti spokojných klientov",
-        "items": [
-          {
-            "id": "test_1",
-            "name": "Marek Kováč",
-            "text": "S Luky InstaL sme boli veľmi spokojní. Profesionálny prístup, dodržanie termínu a kvalitná práca. Odporúčam každému, kto hľadá spoľahlivého inštalatéra.",
-            "role": "Majiteľ rodinného domu, Sabinov",
-            "rating": 5
-          },
-          {
-            "id": "test_2",
-            "name": "Jana Novotná",
-            "text": "Rekonštrukcia kúpeľne prebehla presne podľa plánu. Všetko bolo čisté, precízne a za dohodnutú cenu. Ďakujem za skvelú prácu!",
-            "role": "Klientka, Prešov",
-            "rating": 5
-          },
-          {
-            "id": "test_3",
-            "name": "Peter Balog",
-            "text": "Výborná komunikácia a rýchle riešenie problému s kúrením. Prišli ešte v ten istý deň a všetko opravili. Profesionáli na správnom mieste.",
-            "role": "Bytový dom, Sabinov",
-            "rating": 5
-          }
-        ]
-      }
-    },
+
     {
       "type": "cta_banner",
       "id": "cta_1",
@@ -193,22 +119,13 @@
       "order": 9,
       "fields": {
         "headline": "Potrebujete spoľahlivého inštalatéra?",
-        "text": "Zavolajte nám ešte dnes a dohodnite si bezplatnú konzultáciu. Sme tu pre vás v Sabinove a okolí.",
+        "text": "Zavolajte nám ešte dnes a dohodnite si bezplatnú konzultáciu.",
         "cta_text": "Zavolajte: 0908 420 409",
         "cta_url": "tel:+421908420409",
-        "background_image": "https://images.pexels.com/photos/5691635/pexels-photo-5691635.jpeg?auto=compress&cs=tinysrgb&w=1400"
+        "background_image": "img2.jpg"
       }
     },
-    {
-      "type": "map",
-      "id": "map_1",
-      "label": "Mapa",
-      "order": 10,
-      "fields": {
-        "headline": "Kde nás nájdete",
-        "embed_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10542.08!2d20.9927!3d49.1072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473eff1e14d3d0e7%3A0x400f7d1c696dc80!2sBrezovica%2C%20Slovakia!5e0!3m2!1sen!2ssk!4v1709300000000"
-      }
-    },
+
     {
       "type": "contact",
       "id": "contact_1",
@@ -229,12 +146,12 @@
       "label": "Päta stránky",
       "order": 11,
       "fields": {
-        "copyright_text": "2026 Luky InstaL. Všetky práva vyhradené.",
-        "description": "Profesionálne inštalatérske služby v oblasti vody, kúrenia a plynu v Sabinove a okolí.",
+        "copyright_text": "2026 Luky InstaL | internetové stránky vytvoril eweb TOPlist",
+        "description": "Profesionálne inštalatérske služby v oblasti vody, kúrenia a plynu.",
         "links": [
-          { "id": "foot_link_1", "label": "Domov", "url": "#hero_1" },
+          { "id": "foot_link_1", "label": "Úvod", "url": "#hero_1" },
           { "id": "foot_link_2", "label": "Služby", "url": "#services_1" },
-          { "id": "foot_link_3", "label": "Galéria", "url": "#gallery_1" },
+          { "id": "foot_link_3", "label": "Realizácie", "url": "#gallery_1" },
           { "id": "foot_link_4", "label": "Kontakt", "url": "#contact_1" }
         ],
         "social": [

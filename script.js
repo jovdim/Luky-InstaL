@@ -54,7 +54,8 @@ function renderSection(section) {
 /* ===== RENDERERS ===== */
 
 function renderNav(el, s) {
-  setText(el, 'logo_text', s.fields.logo_text);
+  const logoImg = el.querySelector('[data-field="logo_image"]');
+  if (logoImg && s.fields.logo_image) logoImg.src = s.fields.logo_image;
   const ul = el.querySelector('[data-field="links"]');
   if (ul && s.fields.links) {
     ul.innerHTML = s.fields.links.map(l =>
@@ -65,27 +66,30 @@ function renderNav(el, s) {
 
 function renderHero(el, s) {
   const f = s.fields;
+  setText(el, 'hero_badge', f.hero_badge);
   setText(el, 'headline', f.headline);
   setText(el, 'subheadline', f.subheadline);
-  const cta = el.querySelector('[data-field="cta_text"]');
-  if (cta && f.cta_text) { cta.innerHTML = getIcon('phone') + ' ' + f.cta_text; if (f.cta_url) cta.href = f.cta_url; }
-  const cta2 = el.querySelector('[data-field="cta_secondary_text"]');
-  if (cta2 && f.cta_secondary_text) { cta2.textContent = f.cta_secondary_text; if (f.cta_secondary_url) cta2.href = f.cta_secondary_url; }
-
-  // Trust badges
-  const trustEl = el.querySelector('[data-field="trust_badges"]');
-  if (trustEl && f.trust_badges) {
-    trustEl.innerHTML = f.trust_badges.map(b =>
-      `<div class="trust-item"><span class="trust-value">${b.value}</span><span class="trust-label">${b.label}</span></div>`
-    ).join('');
+  const cta1 = el.querySelector('[data-field="cta_text"]');
+  if (cta1) {
+    cta1.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> ${f.cta_text}`;
+    if (f.cta_url) cta1.href = f.cta_url;
   }
-
-  // Image mosaic
-  const mosaicEl = el.querySelector('[data-field="hero_images"]');
-  if (mosaicEl && f.hero_images) {
-    mosaicEl.innerHTML = f.hero_images.map((img, i) =>
-      `<div class="mosaic-img"><img src="${img}" alt="Projekt ${i+1}"${i === 0 ? '' : ' loading="lazy"'}></div>`
-    ).join('');
+  const cta2 = el.querySelector('[data-field="cta_secondary_text"]');
+  if (cta2) {
+    cta2.textContent = f.cta_secondary_text;
+    if (f.cta_secondary_url) cta2.href = f.cta_secondary_url;
+  }
+  const bgImg = el.querySelector('[data-field="background_image"]');
+  if (bgImg && f.background_image) bgImg.src = f.background_image;
+  
+  const trustDiv = el.querySelector('[data-field="trust_badges"]');
+  if (trustDiv && f.trust_badges) {
+    trustDiv.innerHTML = f.trust_badges.map(b => `
+      <div class="trust-item">
+        <span class="trust-value">${b.value}</span>
+        <span class="trust-label">${b.label}</span>
+      </div>
+    `).join('');
   }
 }
 
@@ -96,15 +100,15 @@ function renderAbout(el, s) {
   setText(el, 'text_secondary', f.text_secondary);
   const mainImg = el.querySelector('[data-field="image"]');
   if (mainImg && f.image) mainImg.src = f.image;
-  const secImg = el.querySelector('[data-field="image_secondary"]');
-  if (secImg && f.image_secondary) secImg.src = f.image_secondary;
-
-  // Highlights
-  const hlEl = el.querySelector('[data-field="highlights"]');
-  if (hlEl && f.highlights) {
-    hlEl.innerHTML = f.highlights.map(h =>
-      `<div class="about-highlight-chip" data-section="${s.id}" data-field="highlights" data-item="${h.id}">${getIcon(h.icon)}<span>${h.text}</span></div>`
-    ).join('');
+  
+  const hl = el.querySelector('[data-field="highlights"]');
+  if (hl && f.highlights) {
+    hl.innerHTML = f.highlights.map(h => `
+      <div class="about-highlight-chip">
+        ${getIcon(h.icon)}
+        <span>${h.text}</span>
+      </div>
+    `).join('');
   }
 }
 
@@ -213,6 +217,8 @@ function renderMap(el, s) {
 
 function renderFooter(el, s) {
   const f = s.fields;
+  const logoImg = el.querySelector('[data-field="logo_image"]');
+  if (logoImg && f.logo_image) logoImg.src = f.logo_image;
   setText(el, 'description', f.description);
   setText(el, 'copyright_text', f.copyright_text);
   const linksList = el.querySelector('[data-field="links"]');
